@@ -6,7 +6,8 @@
     "type": "git",
     "url": "https://github.com/hanterlantant/ts-generic-builder"
   },
-  "main": "src/builder.ts",
+  "main": "dist/builder.js",
+  "types": "dist/builder.d.ts",
   "scripts": {
     "test": "ts-node node_modules/jasmine/bin/jasmine test/**/*.ts",
     "prettier": "prettier --config .prettierrc './**/*.ts' --write",
@@ -15,6 +16,7 @@
   },
   "author": "Andreas Hellmann <hanterlantant@posteo.de>",
   "license": "MIT",
+  "keywords": ["typescript", "type-safe", "generic", "builder pattern"],
   "devDependencies": {
     "@types/jasmine": "^3.5.9",
     "@types/node": "^13.9.2",
