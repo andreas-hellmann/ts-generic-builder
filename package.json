@@ -6,12 +6,12 @@
     "type": "git",
     "url": "https://github.com/hanterlantant/ts-generic-builder"
   },
-  "main": "dist/builder.js",
-  "types": "dist/builder.d.ts",
+  "main": "dist/src/builder.js",
+  "types": "dist/src/builder.d.ts",
   "scripts": {
     "test": "ts-node node_modules/jasmine/bin/jasmine test/**/*.ts",
     "prettier": "prettier --config .prettierrc './**/*.ts' --write",
-    "build": "tsc --build tsconfig.json",
+    "build": "rm -rf dist && tsc --build tsconfig.json",
     "lint": "eslint -c .eslintrc.js --ext .ts src"
   },
   "author": "Andreas Hellmann <hanterlantant@posteo.de>",
