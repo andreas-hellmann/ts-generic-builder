@@ -1,13 +1,13 @@
 {
   "name": "ts-generic-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Type-safe generic builder pattern implementation in Typescript",
   "repository": {
     "type": "git",
     "url": "https://github.com/hanterlantant/ts-generic-builder"
   },
-  "main": "dist/src/builder.js",
-  "types": "dist/src/builder.d.ts",
+  "main": "dist/builder.js",
+  "types": "dist/builder.d.ts",
   "scripts": {
     "test": "ts-node node_modules/jasmine/bin/jasmine test/**/*.ts",
     "prettier": "prettier --config .prettierrc './**/*.ts' --write",
