@@ -1,5 +1,5 @@
 {
-  "name": "typescript-generic-builder",
+  "name": "ts-generic-builder",
   "version": "1.0.1",
   "description": "Type-safe generic builder pattern implementation in Typescript",
   "repository": {
@@ -16,7 +16,12 @@
   },
   "author": "Andreas Hellmann <hanterlantant@posteo.de>",
   "license": "MIT",
-  "keywords": ["typescript", "type-safe", "generic", "builder pattern"],
+  "keywords": [
+    "typescript",
+    "type-safe",
+    "generic",
+    "builder pattern"
+  ],
   "devDependencies": {
     "@types/jasmine": "^3.5.9",
     "@types/node": "^13.9.2",
