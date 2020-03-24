@@ -1,6 +1,6 @@
 {
   "name": "typescript-generic-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Type-safe generic builder pattern implementation in Typescript",
   "repository": {
     "type": "git",
