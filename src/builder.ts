@@ -2,8 +2,8 @@ export interface Validatable {
     validate(): boolean;
 }
 
-export class Builder<T> implements Validatable {
-    constructor(private creator: new (t: Builder<T> & T) => T) {}
+export class DomainBuilder<T, C extends T> implements Validatable {
+    constructor(private creator: new (t: DomainBuilder<T, C> & T) => C) {}
 
     with<K extends keyof T>(obj: Pick<T, K>): this & Pick<T, K> {
         return Object.assign(this, obj);
@@ -17,7 +17,7 @@ export class Builder<T> implements Validatable {
         return true;
     }
 
-    build(this: this & T): T {
+    build(this: this & T): C {
         if (this.validate()) {
             return new this.creator(this);
         }
@@ -25,3 +25,5 @@ export class Builder<T> implements Validatable {
         throw new Error(`Object of type ${this.creator.name} could not be validated.`);
     }
 }
+
+export class Builder<T> extends DomainBuilder<T, T> {}

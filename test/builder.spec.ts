@@ -1,5 +1,5 @@
-import { Builder } from '../src/builder';
-import { Person } from './person';
+import { Builder, DomainBuilder } from '../src/builder';
+import { Person, PersonVo } from './person';
 import { Place } from './place';
 
 describe('Builder test', function() {
@@ -49,6 +49,22 @@ describe('Builder test', function() {
             .with({ firstname: '' })
             .with({ surname: expectedResult.surname });
         expect(builder.build.bind(builder)).toThrowError('Object of type Person could not be validated.');
+    });
+
+    it('Correct minimal PersonVo', function() {
+        const result: PersonVo = new DomainBuilder(PersonVo)
+            .with({ firstname: expectedResult.firstname })
+            .with({ surname: expectedResult.surname })
+            .build();
+
+        expect(result.title).toBeUndefined();
+        expect(result.firstname).toBe(expectedResult.firstname);
+        expect(result.surname).toBe(expectedResult.surname);
+        expect(result.birthday).toBeUndefined();
+
+        const newName = 'Meier';
+        result.changeSurname(newName);
+        expect(result.surname).toBe(newName);
     });
 
     it('Correct full Place', function() {

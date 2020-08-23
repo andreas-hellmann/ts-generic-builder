@@ -1,38 +1,40 @@
 {
-  "name": "ts-generic-builder",
-  "version": "1.0.1",
-  "description": "Type-safe generic builder pattern implementation in Typescript",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hanterlantant/ts-generic-builder"
-  },
-  "main": "dist/builder.js",
-  "types": "dist/builder.d.ts",
-  "scripts": {
-    "test": "ts-node node_modules/jasmine/bin/jasmine test/**/*.ts",
-    "prettier": "prettier --config .prettierrc './**/*.ts' --write",
-    "build": "rm -rf dist && tsc --build tsconfig.json",
-    "lint": "eslint -c .eslintrc.js --ext .ts src"
-  },
-  "author": "Andreas Hellmann <hanterlantant@posteo.de>",
-  "license": "MIT",
-  "keywords": [
-    "typescript",
-    "type-safe",
-    "generic",
-    "builder pattern"
-  ],
-  "devDependencies": {
-    "@types/jasmine": "^3.5.9",
-    "@types/node": "^13.9.2",
-    "@typescript-eslint/eslint-plugin": "^2.24.0",
-    "@typescript-eslint/parser": "^2.24.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "jasmine": "^3.5.0",
-    "prettier": "^1.19.1",
-    "ts-node": "^8.7.0",
-    "typescript": "^3.8.3"
-  }
+    "name": "ts-generic-builder",
+    "version": "1.0.3",
+    "description": "Type-safe generic builder pattern implementation in Typescript",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hanterlantant/ts-generic-builder"
+    },
+    "main": "dist/builder.js",
+    "types": "dist/builder.d.ts",
+    "scripts": {
+        "test": "ts-node node_modules/jasmine/bin/jasmine test/**/*.ts",
+        "prettier": "prettier --config .prettierrc './**/*.ts' --write",
+        "build": "rm -rf dist && tsc --build tsconfig.json",
+        "lint": "eslint -c .eslintrc.js --ext .ts src"
+    },
+    "author": "Andreas Hellmann <hanterlantant@posteo.de>",
+    "license": "MIT",
+    "keywords": [
+        "typescript",
+        "type-safe",
+        "generic",
+        "builder pattern",
+        "DDD",
+        "Domain Driven Design"
+    ],
+    "devDependencies": {
+        "@types/jasmine": "^3.5.13",
+        "@types/node": "^13.13.15",
+        "@typescript-eslint/eslint-plugin": "^2.34.0",
+        "@typescript-eslint/parser": "^2.34.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "jasmine": "^3.6.1",
+        "prettier": "^1.19.1",
+        "ts-node": "^8.10.2",
+        "typescript": "^3.9.7"
+    }
 }
