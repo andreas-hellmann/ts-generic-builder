@@ -2,7 +2,7 @@ import { Builder, DomainBuilder } from '../src/builder';
 import { Person, PersonVo } from './person';
 import { Place } from './place';
 
-describe('Builder test', function() {
+describe('Builder test', function () {
     const expectedResult: Person = {
         title: 'Mister',
         firstname: 'Magne',
@@ -16,7 +16,7 @@ describe('Builder test', function() {
         gpsLatitude: '51.984371',
     };
 
-    it('Correct full Person', function() {
+    it('Correct full Person', function () {
         const result: Person = new Builder(Person)
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             .with({ title: expectedResult.title! })
@@ -32,7 +32,7 @@ describe('Builder test', function() {
         expect(result.birthday).toBe(expectedResult.birthday);
     });
 
-    it('Correct minimal Person', function() {
+    it('Correct minimal Person', function () {
         const result: Person = new Builder(Person)
             .with({ firstname: expectedResult.firstname })
             .with({ surname: expectedResult.surname })
@@ -44,14 +44,14 @@ describe('Builder test', function() {
         expect(result.birthday).toBeUndefined();
     });
 
-    it('Validation failed Person', function() {
+    it('Validation failed Person', function () {
         const builder: Builder<Person> & Person = new Builder(Person)
             .with({ firstname: '' })
             .with({ surname: expectedResult.surname });
         expect(builder.build.bind(builder)).toThrowError('Object of type Person could not be validated.');
     });
 
-    it('Correct minimal PersonVo', function() {
+    it('Correct minimal PersonVo', function () {
         const result: PersonVo = new DomainBuilder(PersonVo)
             .with({ firstname: expectedResult.firstname })
             .with({ surname: expectedResult.surname })
@@ -67,7 +67,7 @@ describe('Builder test', function() {
         expect(result.surname).toBe(newName);
     });
 
-    it('Correct full Place', function() {
+    it('Correct full Place', function () {
         const result: Place = new Builder(Place)
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             .with({ gpsLongitude: expectedResultPlace.gpsLongitude! })
@@ -79,7 +79,7 @@ describe('Builder test', function() {
         expect(result.gpsLatitude).toBe(expectedResultPlace.gpsLatitude);
     });
 
-    it('Correct minimal Place', function() {
+    it('Correct minimal Place', function () {
         const result: Place = new Builder(Place).build();
 
         expect(result.gpsLongitude).toBeUndefined();

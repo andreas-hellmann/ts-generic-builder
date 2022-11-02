@@ -34,10 +34,7 @@ const birthday: Date | undefined = new Builder(Person)
     .with({ birthday: new Date('2000-01-11') }).birthday;
 
 // Correct
-const telgte: Place = new Builder(Place)
-    .with({ gpsLongitude: '7.785300' })
-    .with({ gpsLatitude: '51.984371' })
-    .build();
+const telgte: Place = new Builder(Place).with({ gpsLongitude: '7.785300' }).with({ gpsLatitude: '51.984371' }).build();
 
 // Correct - because gpsLongitude may be undefined
 const nowhere: Place = new Builder(Place).with({ gpsLongitude: undefined }).build();
