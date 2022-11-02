@@ -1,10 +1,10 @@
 {
     "name": "ts-generic-builder",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Type-safe generic builder pattern implementation in Typescript",
     "repository": {
         "type": "git",
-        "url": "https://github.com/hanterlantant/ts-generic-builder"
+        "url": "https://github.com/andreas-hellmann/ts-generic-builder"
     },
     "main": "dist/builder.js",
     "types": "dist/builder.d.ts",
@@ -14,7 +14,7 @@
         "build": "rm -rf dist && tsc --build tsconfig.json",
         "lint": "eslint -c .eslintrc.js --ext .ts src"
     },
-    "author": "Andreas Hellmann <hanterlantant@posteo.de>",
+    "author": "Andreas Hellmann <andreas.hellmann@posteo.de>",
     "license": "MIT",
     "keywords": [
         "typescript",
@@ -25,16 +25,16 @@
         "Domain Driven Design"
     ],
     "devDependencies": {
-        "@types/jasmine": "^3.5.13",
-        "@types/node": "^13.13.15",
-        "@typescript-eslint/eslint-plugin": "^2.34.0",
-        "@typescript-eslint/parser": "^2.34.0",
-        "eslint": "^6.8.0",
-        "eslint-config-prettier": "^6.11.0",
-        "eslint-plugin-prettier": "^3.1.4",
-        "jasmine": "^3.6.1",
-        "prettier": "^1.19.1",
-        "ts-node": "^8.10.2",
-        "typescript": "^3.9.7"
+        "@types/jasmine": "^4.3.0",
+        "@types/node": "^18.11.9",
+        "@typescript-eslint/eslint-plugin": "^5.42.0",
+        "@typescript-eslint/parser": "^5.42.0",
+        "eslint": "^8.26.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "jasmine": "^4.5.0",
+        "prettier": "^2.7.1",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.8.4"
     }
 }
